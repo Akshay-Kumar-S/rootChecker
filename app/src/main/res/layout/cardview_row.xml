@@ -7,8 +7,9 @@
     android:orientation="horizontal"
     card_view:cardCornerRadius="5dp"
     card_view:cardUseCompatPadding="true"
-    android:elevation="0dp"
-    app:ignore="NamespaceTypo">
+    android:background="@color/colorPrimary"
+    app:ignore="NamespaceTypo"
+    app:targetApi="lollipop">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout_content"

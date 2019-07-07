@@ -19,8 +19,8 @@ class RootAgent {
         var process: Process? = null
         try {
             process = Runtime.getRuntime().exec(arrayOf("/system/xbin/which", "su"))
-            val input = BufferedReader(InputStreamReader(process!!.inputStream))
-            return input.readLine() != null
+            val `in` = BufferedReader(InputStreamReader(process!!.inputStream))
+            return `in`.readLine() != null
         } catch (t: Throwable) {
             return false
         } finally {

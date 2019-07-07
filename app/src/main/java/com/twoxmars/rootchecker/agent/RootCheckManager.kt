@@ -22,66 +22,84 @@ class RootCheckManager(private val mainPresenterImpl: MainPresenterImpl) {
 
     fun startChecking() {
         val rootAgent = RootAgent.instance
-        Log.d(TAG,"startChecking: "+rootAgent.checkRootMethod1())
-        Log.d(TAG,"startChecking: "+rootAgent.checkRootMethod2())
-        Log.d(TAG,"startChecking: "+rootAgent.checkRootMethod3())
-        Log.d(TAG,"startChecking: "+rootAgent.canExecuteSu())
         mainPresenterImpl.rootCheckResult(
-            RootCheckInfo("method1", "content1", rootAgent.checkRootMethod1())
+            RootCheckInfo("Method 1", "checking test-keys present in buildTags", rootAgent.checkRootMethod1())
         )
         mainPresenterImpl.rootCheckResult(
-            RootCheckInfo("method2", "content1", rootAgent.checkRootMethod2())
-        )
-        mainPresenterImpl.rootCheckResult(
-            RootCheckInfo("method3", "content1", rootAgent.checkRootMethod3())
+            RootCheckInfo("Method 2", "execute /system/xbin/which", rootAgent.checkRootMethod2())
         )
         mainPresenterImpl.rootCheckResult(
             RootCheckInfo(
-                "path check 1", rootPaths[0], rootAgent.isRootPathExist(rootPaths[0])
+                "Method 3",
+                "checking package eu.chainfire.supersu is installed or not",
+                rootAgent.checkRootMethod3()
             )
         )
         mainPresenterImpl.rootCheckResult(
             RootCheckInfo(
-                "path check 2", rootPaths[1], rootAgent.isRootPathExist(rootPaths[1])
+                "Method 4",
+                ("Checking path ") + (rootPaths[0] + (" present or not")),
+                rootAgent.isRootPathExist(rootPaths[0])
             )
         )
         mainPresenterImpl.rootCheckResult(
             RootCheckInfo(
-                "path check 3", rootPaths[2], rootAgent.isRootPathExist(rootPaths[2])
+                "Method 5",
+                ("Checking path ") + (rootPaths[1] + (" present or not")),
+                rootAgent.isRootPathExist(rootPaths[1])
             )
         )
         mainPresenterImpl.rootCheckResult(
             RootCheckInfo(
-                "path check 4", rootPaths[3], rootAgent.isRootPathExist(rootPaths[3])
+                "Method 6",
+                ("Checking path ") + (rootPaths[2] + (" present or not")),
+                rootAgent.isRootPathExist(rootPaths[2])
             )
         )
         mainPresenterImpl.rootCheckResult(
             RootCheckInfo(
-                "path check 5", rootPaths[4], rootAgent.isRootPathExist(rootPaths[4])
+                "Method 7",
+                ("Checking path ") + (rootPaths[3] + (" present or not")),
+                rootAgent.isRootPathExist(rootPaths[3])
             )
         )
         mainPresenterImpl.rootCheckResult(
             RootCheckInfo(
-                "path check 6", rootPaths[5], rootAgent.isRootPathExist(rootPaths[5])
+                "Method 8",
+                ("Checking path ") + (rootPaths[4] + (" present or not")),
+                rootAgent.isRootPathExist(rootPaths[4])
             )
         )
         mainPresenterImpl.rootCheckResult(
             RootCheckInfo(
-                "path check 7", rootPaths[6], rootAgent.isRootPathExist(rootPaths[6])
+                "Method 9",
+                ("Checking path ") + (rootPaths[5] + (" present or not")),
+                rootAgent.isRootPathExist(rootPaths[5])
             )
         )
         mainPresenterImpl.rootCheckResult(
             RootCheckInfo(
-                "path check 8", rootPaths[7], rootAgent.isRootPathExist(rootPaths[7])
+                "Method 10",
+                ("Checking path ") + (rootPaths[6] + (" present or not")),
+                rootAgent.isRootPathExist(rootPaths[6])
             )
         )
         mainPresenterImpl.rootCheckResult(
             RootCheckInfo(
-                "path check 9", rootPaths[8], rootAgent.isRootPathExist(rootPaths[8])
+                "Method 11",
+                ("Checking path ") + (rootPaths[7] + (" present or not")),
+                rootAgent.isRootPathExist(rootPaths[7])
             )
         )
         mainPresenterImpl.rootCheckResult(
-            RootCheckInfo("is device rooted", "can execute su", rootAgent.canExecuteSu())
+            RootCheckInfo(
+                "Method 12",
+                ("Checking path ") + (rootPaths[8] + (" present or not")),
+                rootAgent.isRootPathExist(rootPaths[7])
+            )
+        )
+        mainPresenterImpl.rootCheckResult(
+            RootCheckInfo("Method 13", "can execute su", rootAgent.canExecuteSu())
         )
     }
 }
