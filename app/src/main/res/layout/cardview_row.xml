@@ -54,25 +54,11 @@
                     android:textSize="16sp" />
             </LinearLayout>
 
-            <com.nightonke.jellytogglebutton.JellyToggleButton
-                android:id="@+id/checkbox"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="12dp"
-                app:jtbRightText="Rooted"
-                app:jtbRightTextColor="@android:color/white"
-                app:jtbLeftTextSize="12sp"
-                app:jtbRightTextSize="12sp"
-                app:jtbTextMarginLeft="2dp"
-                app:jtbTextMarginRight="2dp"
-                app:jtbTextMarginBottom="2dp"
-                app:jtbTextMarginTop="2dp"
-                app:jtbTextMarginCenter="4dp"
-                app:jtbJelly="lazy_tremble_head_fatty"
-                app:jtbLeftBackgroundColor="@android:color/white"
-                app:jtbLeftThumbColor="@color/green100"
-                app:jtbRightBackgroundColor="@color/green50"
-                app:jtbRightThumbColor="@color/green700" />
+            <ImageView
+                android:id="@+id/success_failed"
+                android:layout_width="28sp"
+                android:layout_height="28sp"
+                android:layout_margin="12dp"/>
 
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

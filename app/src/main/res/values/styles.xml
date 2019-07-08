@@ -4,7 +4,7 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/green700</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/titillium</item>
         <item name="android:textColor">@color/black</item>
